@@ -26,6 +26,25 @@ const MovieDetailPage = () =>{
                 setCast(response.data.cast);
             })
             .catch(error => console.error('Error fetching movie cast', error))
-    }, [id])
+    }, [id]);
 
+    if(!movie) return <div className="text-center text-white mt-10">Loading...</div>;
+
+    return(
+        <>
+        <Navbar />
+        <div className="container my-4 text-white">
+            <Link href="/" passHref>
+            <p className="text-primary mb-4">Back to List</p>
+            </Link>
+            <div className="col-md-4 mb-3 mb-md-0">
+                <img 
+                    src={`${IMAGE_BASE_URL}${movie.poster_path}`}
+                    alt={movie.title}
+                    className="img-fluid rounded shadow-lg"
+                    />
+            </div>
+        </div>
+        </>
+    )
 }
