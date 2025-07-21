@@ -19,6 +19,13 @@ const MovieDetailPage = () =>{
             .then(response => setMovie(response.data))
             .catch(error => console.error('Error fetching movie details', error));
 
-    })
+        //fetching the movie's cast
+        api.get(`/movie/${movie_id}/credits`)
+            .then(response => {
+                console.log('Cast response data: ', response.data)
+                setCast(response.data.cast);
+            })
+            .catch(error => console.error('Error fetching movie cast', error))
+    }, [id])
 
 }

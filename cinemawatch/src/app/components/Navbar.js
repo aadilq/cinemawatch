@@ -2,8 +2,6 @@ import React, {useState} from "react";
 import Link from "next/link";
 
 const Navbar = () => {
-     
-
      return(
         <nav className="navbar" style={{ "background-color": "#183B4E" }}>
             <div className="container">
@@ -14,8 +12,6 @@ const Navbar = () => {
                 </div>
                 </Link>
             </div>
-        
-
         </nav>
      )
 }
