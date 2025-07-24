@@ -44,6 +44,23 @@ const MovieDetailPage = () =>{
                     className="img-fluid rounded shadow-lg"
                     />
             </div>
+            <div className="col-md-8">
+                <h1 className="display-4 mb-2">{movie.title}</h1>
+                <div className="mb-4">
+                    <span className="badge bg-warning text-dark mr-2">
+                        Rating: {movie.vote_average}
+                    </span>
+                    <span className="mr-2">{movie.runtime}</span>
+                    <span>{movie.genres.map(genre => genre.name).join(", ")}</span>
+                </div>
+                <div>
+                    <p className="mb-2 text-dark"><strong>Release Date:</strong>
+                    {new Date(movie.release_date).toLocaleDateString}</p>
+                    <h2 className="h4 text-dark mb-2">Overview</h2>
+                    <p className="text-dark">{movie.overview}</p>
+                </div>
+            </div>
+
         </div>
         </>
     )
