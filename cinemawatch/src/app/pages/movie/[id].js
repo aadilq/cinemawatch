@@ -60,8 +60,27 @@ const MovieDetailPage = () =>{
                     <p className="text-dark">{movie.overview}</p>
                 </div>
             </div>
-
+            <h2 className="h4 mb-4 border-bottom border-light pb-2">Cast</h2>
+            <div className="row">
+                {cast.map(member => (
+                    <div key={member.cast_id} className="col-6 col-sm-4 col-md-3 col-lg-2 mb-4 d-flex flex-columnalign-items center">
+                        <div className="position-relative">
+                            <img
+                           src={member.profile_path ? `${IMAGE_BASE_URL}$
+                           {member.profile_path}` : 'https://media.geeksforgeeks.org/wp-content/uploads/20240805102426/pta.jpg'}
+                            alt={member.name}
+                            className="img-fluid rounded-circle"
+                            style={{width: '120px', height: '120px', objectFit: 'cover'}} 
+                            />
+            </div>
+            <p className="font-weight bold text-center mt-2">{member.name}</p>
+            <p className="text-muted text-center">{member.character}</p>
+            </div>
+                ))}
+            </div>
         </div>
         </>
     )
-}
+};
+
+export default MovieDetailPage
