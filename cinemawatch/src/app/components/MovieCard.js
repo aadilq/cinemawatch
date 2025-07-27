@@ -17,6 +17,19 @@ const MovieCard = ({movie}) =>{
                 </div>
             </div>
             </Link>
+            <div className="card-body">
+                <h5 className="card-title">{movie.title}</h5>
+                <div className="d-flex justify-content-between align-items-center">
+                    <span className="bg-warning text-dark text-xs font-weight-bold px-2 py-1 rounded">
+                    ★ {movie.vote_average}
+                    </span>
+                    <span className="text-secondary text-xs font-weight-bold">
+                        Popularity: {movie.popularity}
+                    </span>
+                </div>
+            </div>
         </div>
     )
-}
+};
+
+export default MovieCard;
