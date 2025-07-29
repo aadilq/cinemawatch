@@ -12,7 +12,7 @@ const HomePage = () =>{
     const [searching, setSearching] = useState(false);
 
     useEffect(() =>{
-        const fetchMovie = async () => {
+        const fetchMovies = async () => {
             try {
                 const endpoint = searching ? '/search/movie' : '/movie/popular'
                 const response = api.get(endpoint, {
@@ -27,5 +27,13 @@ const HomePage = () =>{
                 console.error(error)
             }
         }
-    })
+        fetchMovies()
+
+    }, [currentPage, query, searching])
+
+    const handleSearch = (e) =>{
+        e.preventDefault();
+        setCurrentPage(1);
+        setSearching(true);
+    }
 }
