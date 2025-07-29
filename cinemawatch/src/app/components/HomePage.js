@@ -56,8 +56,16 @@ const HomePage = () =>{
                     onChange={(e) => e.target.value}
                     placeholder="Search for Movies"
                     />
+                    <button className="btn btn-outline-success">
+                        Search
+                    </button>
                 </form>
             </div>
+            {searching && (
+                <button onClick={handleReset} className="btn btn-outline-primary mb-4">
+                    Reset Search
+                </button>
+            )}
         </div>
         </>
     )
