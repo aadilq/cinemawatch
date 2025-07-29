@@ -42,4 +42,23 @@ const HomePage = () =>{
         setSearching(false);
         setCurrentPage(1);
     }
+
+    return(
+        <>
+        <Navbar />
+        <div className="container my-4">
+            <div className="d-flex justify-content-between">
+                <form onSubmit={handleSearch} className="d-flex">
+                    <input 
+                    className="form-control me-2"
+                    type="search"
+                    value={query}
+                    onChange={(e) => e.target.value}
+                    placeholder="Search for Movies"
+                    />
+                </form>
+            </div>
+        </div>
+        </>
+    )
 }
