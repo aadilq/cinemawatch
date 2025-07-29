@@ -32,8 +32,14 @@ const HomePage = () =>{
     }, [currentPage, query, searching])
 
     const handleSearch = (e) =>{
-        e.preventDefault();
+        e.preventDefault(); 
         setCurrentPage(1);
         setSearching(true);
+    }
+
+    const handleReset = () =>{
+        setQuery('');
+        setSearching(false);
+        setCurrentPage(1);
     }
 }
