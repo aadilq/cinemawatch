@@ -73,6 +73,11 @@ const HomePage = () =>{
                     </div>
                 ))}
             </div>
+            <Pagination
+            currentPage={currentPage}
+            totalPages={totalPages}
+            onPageChange={(page) => setCurrentPage(page)}
+            />
         </div>
         </>
     )
