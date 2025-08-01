@@ -10,7 +10,7 @@ const Pagination = ({currentPage, totalPages, onPageChange}) => {
     const adjustedStartPage = Math.max(1, endPage - maxButtons + 1);
 
     const pages = Array.from({ length: endPage - adjustedStartPage + 1}, 
-        (_, i) => adjustedStartPage + 1)
+        (_, i) => adjustedStartPage + i)
 
     return(
         <nav aria-label="Page navigation">
@@ -23,10 +23,11 @@ const Pagination = ({currentPage, totalPages, onPageChange}) => {
                         &laquo;
                     </button>
                 </li>
-                {pages.length > 0 && pages.map(page => (
+                {pages.length > 0 && pages.map((page, index) => (
                     <li
-                    key={page}
-                    className={`page-item ${currentPage == page ? 'active': ''}`}>
+                    key={index}
+                    className={`page-item ${currentPage == page ? 'active': ''}`}
+                    >
                         <button
                         className="page-link"
                         onClick={() => onPageChange(page)}
