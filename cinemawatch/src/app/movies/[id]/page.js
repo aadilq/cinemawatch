@@ -38,7 +38,7 @@ const MovieDetailPage = () =>{
     return(
         <>
         <Navbar />
-        <div className="container my-4 text-white">
+        <div className="container my-4 text-white ">
             <Link href="/" passHref>
             <p className="text-primary mb-4">Back to List</p>
             </Link>

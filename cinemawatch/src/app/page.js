@@ -1,12 +1,11 @@
 // Page.js
-
 'use client'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import NavBar from './components/Navbar'
+import HomePage from './components/HomePage';
 function App() {
     return (
         <>
-        <NavBar />
+        <HomePage />
         </>
     );
 }
