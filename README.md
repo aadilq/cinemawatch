@@ -21,6 +21,7 @@ Cinemawatch is a movie database App that uses the TMBDI (The movie database) API
 
 ## Demo
 
+<img width="1470" height="831" alt="Screenshot 2025-08-03 at 2 49 39 PM" src="https://github.com/user-attachments/assets/8af5d7d8-7fb2-47f0-abff-31eeaa86c71e" />
 
 
 ## Lessons Learned
