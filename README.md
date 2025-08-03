@@ -11,21 +11,16 @@ Cinemawatch is a movie database App that uses the TMBDI (The movie database) API
 
 
 
+
+
+
+
 ## Tech Stack
 
 **Tech Stack:** Next.js, Node.js, Bootstrap, Vercel
 
-
-
-
-
-
-
-
-
-
-
 ## Demo
+
 
 
 ## Lessons Learned
